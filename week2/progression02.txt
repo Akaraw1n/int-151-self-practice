@@ -1,0 +1,17 @@
+week นี้ผมเน้นศึ่กษาต่อจากที่เรียนในคาบเลยคือการนำเรื่อง object มาฝึกทำโจทย์
+โดยเริ่มจากการทำความเข้าใจกับ function shallowEquality โดยเปรียบเทียบ keys ของ
+object 2 ตัว ไม่ใช่การเปรียบเทียบ object เมื่อ values และ keys เหมือนกัน ผลลัพธ์จึงเป็น true
+ในส่วนของโจทย์ที่เหลือ week นี้ผมใช้ open-ai ในการสร้างโจทย์ให้ตรงกับเป้าหมายมากขึ้นโดยสร้าง object ในทุกรูปแบบ
+และเพิ่ม if-else รวมถึง for-loop เข้ามาเพื่อทบทวนและฝึกหัดเพิ่มเติม
+ข้อที่ // 4.Constructor Function + for loop 
+function Book(title,page){
+    this.title = title
+    this.page = page
+
+} 
+const books = [new Book("JS",345),new Book("html",245),new Book("Database",156)]
+let info = []
+for(let i = 0; i < books.length;i++){
+    info.push(`${books[i].title} : ${books[i].page}`)
+}
+ข้อนี้จะเป็นการสร้างตัวแปร 1 ตัวที่เก็บ object 3 ตัวและให้แสดงออกมาในรูปของ array โดยการใช้ for-loop และ .push
