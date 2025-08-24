@@ -1,0 +1,33 @@
+จาก self-practice week3
+ต่อยอดจาก exercise 2 ในห้อง และทำโจทย์เพิ่มเติม
+โดยใน exercise 2 ที่ต่อยอดฟังชันก์ จาก
+    for (let word of words){
+        if(result[word] === undefined){
+            result[word] = 1
+        } else {
+            result[word] += 1
+         }
+    }
+    return result
+    for (let word of words){
+        result[word] = (result[word] || 0) + 1
+    }
+    return result ซึ่งจะทำให้กระชับมากขึ้น
+
+ในข้อที่ 2 จากบรรทัด
+    let formatted = number.replace(/(\d{3})(\d{3})(\d{4})/,"$1-$2-$3")
+คือการ format output ใหม่ โดยแบ่งเป็น 3-3-4 เป็น format ที่คุ้นชินและตาม output ที่โจทย์ต้องการ
+
+ในข้อที่ 3 
+    if(!/[a-z]/.test(letter)) continue;
+ถ้า letter ไม่ใช่ตัวอักษรภาษาอังกฤษเล็ก (a–z) ให้ข้าม (continue) loop รอบนี้ไปเลย
+
+ในนข้อที่ 4 
+    result.push(array.slice(i,i + size))
+จากบรรทัดนี้ คือการ push ค่าเข้าไปให้เท่ากับ size ที่เริ่มจากตัวที่ i และสิ้นสุดที่ตำแหน่ง i + size 
+ไม่เอาตำแหน่ง size 
+ในข้อที่ 5 บรรทัด
+    let sorted = Object.entries(result).sort((a, b) => b[1] - a[1])
+Object.entries(result) เป็นการเปลี่ยน obj เป็น arr และให้เรียงจากน้อยไปมาก
+คือถ้า b[1] - a[1] ค่าเป็นบวกจะเรียงจากมากไปน้อย
+ 
