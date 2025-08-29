@@ -1,0 +1,18 @@
+สัปดาห์นี้ผมได้ทบทวนโจทย์ของหัวข้อ ArrayMethod 
+โดยเรียกส่วนใหญ่จะใช้ filter, map, sort, reduce สิ่งที่ได้จากการทำโจยท์
+.map สร้าง object ใหม่ที่มีฟิลด์เพิ่ม เช่น { name, grade } 
+จากข้อที่ 10 .map(student => 
+    ({ name : student.name,
+    grade : student.score >= 80 ? "A" :
+            student.score >= 70 ? "B" :
+            student.score >= 60 ? "C" : "D"}))
+--> ใช้ map ในการแปลงสามาชิกใน arr เป็น object {name, score}
+และใช้ nested ternary เพื่อตัดกรองว่าเกรดอะไร //ถาม ai เพิ่มเติม
+
+.reduce นั้นจากข้อที่ 8 .reduce((acc,word) => {
+    acc[word] = (acc[word]|| 0) +1
+    return acc
+},{})
+--> เปลี่ยน arr ให้เป็น object และนับจำนวนคำที่เจอ คล้ายกับ exercise ก่อนหน้า 
+โดยรวมแล้วสัปดาห์นี้เป็นการทบทวนโจทย์ให้คุ้นชินมากกว่าเพราะได้เรียนรู้จากในห้องแล้ว ก็
+มีความคล้างคลึงกัน
